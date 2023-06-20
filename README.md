@@ -1,1 +1,1 @@
-# qr_normalization
+# Описание проекта и запуск в файле report.pdf
