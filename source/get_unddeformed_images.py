@@ -180,7 +180,8 @@ def get_statistics(dataset_path):
             t_retval_no_norm, decoded_info, points, straight_qrcode = qcd.detectAndDecodeMulti(plt.imread(images[image_i]))
             
             image_c = make_linear(images[image_i], (X, Y))
-            plt.savefig('normalization_results/'+ images_names[image_i])
+#            plt.savefig('normalization_results/'+ images_names[image_i])
+            cv2.imwrite('normalization_results/'+ images_names[image_i], image_c)
             retval_norm, decoded_info, points, straight_qrcode = qcd.detectAndDecodeMulti(image_c)
 
             dataset_size += 1
